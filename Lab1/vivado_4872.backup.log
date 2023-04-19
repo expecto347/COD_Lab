@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 10 09:55:51 2023
+# Process ID: 4872
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3932 C:\Users\expecto\Desktop\COD_Lab\Lab1\Lab1.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab1/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 09:56:35 2023...

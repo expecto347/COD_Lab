@@ -1,0 +1,16 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" Line 1. Module Sig doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Sig
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.fls
+Compiling module xil_defaultlib.sim_fls
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_fls_behav

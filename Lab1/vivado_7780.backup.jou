@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 17 21:24:39 2023
+# Process ID: 7780
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent980 C:\Users\expecto\Desktop\COD_Lab\Lab1\Lab1.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab1/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.xpr
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu_test [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_design
+launch_simulation
+open_wave_config C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg
+source alu_test.tcl
+add_wave {{/alu_test/clk}} 
+current_wave_config {Untitled 1}
+add_wave {{/alu_test/en}} 
+current_wave_config {Untitled 1}
+add_wave {{/alu_test/sel}} 
+current_wave_config {Untitled 1}
+add_wave {{/alu_test/x}} 
+current_wave_config {Untitled 1}
+add_wave {{/alu_test/y}} 
+current_wave_config {Untitled 1}
+add_wave {{/alu_test/of}} 
+relaunch_sim
+set_property is_enabled true [get_files  C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg
+source sim.tcl
+current_wave_config {sim_behav.wcfg}
+add_wave {{/sim/u_alu_test/a}} 
+current_wave_config {sim_behav.wcfg}
+add_wave {{/sim/u_alu_test/b}} 
+current_wave_config {sim_behav.wcfg}
+add_wave {{/sim/u_alu_test/func}} 
+relaunch_sim
+run 10 us
+close_sim

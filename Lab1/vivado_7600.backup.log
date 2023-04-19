@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 10 09:56:46 2023
+# Process ID: 7600
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16476 C:\Users\expecto\Desktop\COD_Lab\Lab1\Lab1.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab1/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/expecto/Desktop/COD_Lab/alu.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/expecto/Desktop/COD_Lab/alu_test.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/expecto/Desktop/COD_Lab/constraints.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_files -from_files C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v -to_files C:/Users/expecto/Desktop/COD_Lab/alu.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/expecto/Desktop/COD_Lab/alu.v' with file 'C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v'.
+update_files -from_files C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v -to_files C:/Users/expecto/Desktop/COD_Lab/alu_test.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/expecto/Desktop/COD_Lab/alu_test.v' with file 'C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v'.
+update_files -from_files C:/Users/expecto/Desktop/COD_Lab/Lab1/constraints.xdc -to_files C:/Users/expecto/Desktop/COD_Lab/constraints.xdc -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/expecto/Desktop/COD_Lab/constraints.xdc' with file 'C:/Users/expecto/Desktop/COD_Lab/Lab1/constraints.xdc'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 09:57:44 2023...

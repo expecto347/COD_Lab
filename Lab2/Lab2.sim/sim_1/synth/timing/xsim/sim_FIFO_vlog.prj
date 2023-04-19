@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"sim_FIFO_time_synth.v" \
+"../../../../../Lab2.srcs/sim_1/new/sim_FIFO.v" \
+
+# Do not sort compile order
+nosort

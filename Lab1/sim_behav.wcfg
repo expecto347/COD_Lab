@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="100000001fs"></ZoomEndTime>
+      <Cursor1Time time="98071000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/sel" type="array">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/x" type="array">
+      <obj_property name="ElementShortName">x[5:0]</obj_property>
+      <obj_property name="ObjectShortName">x[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/y" type="array">
+      <obj_property name="ElementShortName">y[5:0]</obj_property>
+      <obj_property name="ObjectShortName">y[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/of" type="logic">
+      <obj_property name="ElementShortName">of</obj_property>
+      <obj_property name="ObjectShortName">of</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/PERIOD" type="array">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/a" type="array">
+      <obj_property name="ElementShortName">a[5:0]</obj_property>
+      <obj_property name="ObjectShortName">a[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/b" type="array">
+      <obj_property name="ElementShortName">b[5:0]</obj_property>
+      <obj_property name="ObjectShortName">b[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/func" type="array">
+      <obj_property name="ElementShortName">func[3:0]</obj_property>
+      <obj_property name="ObjectShortName">func[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/y" type="array">
+      <obj_property name="ElementShortName">y[5:0]</obj_property>
+      <obj_property name="ObjectShortName">y[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/of" type="logic">
+      <obj_property name="ElementShortName">of</obj_property>
+      <obj_property name="ObjectShortName">of</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/y_reg" type="array">
+      <obj_property name="ElementShortName">y_reg[5:0]</obj_property>
+      <obj_property name="ObjectShortName">y_reg[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/of_reg" type="logic">
+      <obj_property name="ElementShortName">of_reg</obj_property>
+      <obj_property name="ObjectShortName">of_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim/u_alu_test/alu_inst/WIDTH" type="array">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>

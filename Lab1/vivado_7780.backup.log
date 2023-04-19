@@ -1,0 +1,414 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 17 21:24:39 2023
+# Process ID: 7780
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent980 C:\Users\expecto\Desktop\COD_Lab\Lab1\Lab1.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab1/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: fls_new
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1148.215 ; gain = 176.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fls_new' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:3]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'Sig' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Sig' (1#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+	Parameter WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (2#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'fls_new' (3#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1188.039 ; gain = 216.379
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1188.039 ; gain = 216.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1188.039 ; gain = 216.379
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+Finished Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1311.203 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1345.941 ; gain = 374.281
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1345.941 ; gain = 603.637
+set_property top alu_test [current_fileset]
+set_property top alu_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+close_design
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'alu_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj alu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_test_behav xil_defaultlib.alu_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_test_behav xil_defaultlib.alu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot alu_test_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/alu_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 17 23:25:38 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "alu_test_behav -key {Behavioral:sim_1:Functional:alu_test} -tclbatch {alu_test.tcl} -view {C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg
+WARNING: Simulation object /sim/clk was not found in the design.
+WARNING: Simulation object /sim/en was not found in the design.
+WARNING: Simulation object /sim/sel was not found in the design.
+WARNING: Simulation object /sim/x was not found in the design.
+WARNING: Simulation object /sim/y was not found in the design.
+WARNING: Simulation object /sim/of was not found in the design.
+WARNING: Simulation object /sim/PERIOD was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/a was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/b was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/func was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/y was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/of was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/y_reg was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/of_reg was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/WIDTH was not found in the design.
+source alu_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'alu_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1348.941 ; gain = 0.000
+add_wave {{/alu_test/clk}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/alu_test/en}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/alu_test/sel}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/alu_test/x}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/alu_test/y}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/alu_test/of}} 
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1348.941 ; gain = 0.000
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'alu_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj alu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_test_behav xil_defaultlib.alu_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_test_behav xil_defaultlib.alu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot alu_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1348.941 ; gain = 0.000
+set_property is_enabled true [get_files  C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v]
+set_property top sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_test
+Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Apr 17 23:27:33 2023. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 109.418 ; gain = 17.852
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 17 23:27:33 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.941 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.941 ; gain = 0.000
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.941 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_test
+Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sim_behav -key {Behavioral:sim_1:Functional:sim} -tclbatch {sim.tcl} -view {C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg
+source sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 100 ns : File "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" Line 52
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1348.941 ; gain = 0.000
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim/u_alu_test/a}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim/u_alu_test/b}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim/u_alu_test/func}} 
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1395.570 ; gain = 0.000
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 7 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:34]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_test
+Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 110 ns : File "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" Line 53
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1395.570 ; gain = 0.000
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 17 23:32:15 2023...

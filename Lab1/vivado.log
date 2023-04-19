@@ -1,0 +1,547 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Apr 18 21:42:56 2023
+# Process ID: 6404
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2012 C:\Users\expecto\Desktop\COD_Lab\Lab1\Lab1.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab1/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:23]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:24]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:26]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sim_fls_behav -key {Behavioral:sim_1:Functional:sim_fls} -tclbatch {sim_fls.tcl} -view {C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Users/expecto/Desktop/COD_Lab/Lab1/sim_behav.wcfg
+WARNING: Simulation object /sim/clk was not found in the design.
+WARNING: Simulation object /sim/en was not found in the design.
+WARNING: Simulation object /sim/sel was not found in the design.
+WARNING: Simulation object /sim/x was not found in the design.
+WARNING: Simulation object /sim/y was not found in the design.
+WARNING: Simulation object /sim/of was not found in the design.
+WARNING: Simulation object /sim/PERIOD was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/a was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/b was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/func was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/y was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/of was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/y_reg was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/of_reg was not found in the design.
+WARNING: Simulation object /sim/u_alu_test/alu_inst/WIDTH was not found in the design.
+source sim_fls.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sim_fls_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 791.785 ; gain = 4.680
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim_fls/rst}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim_fls/clk}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim_fls/en}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim_fls/d}} 
+current_wave_config {sim_behav.wcfg}
+sim_behav.wcfg
+add_wave {{/sim_fls/f}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'a' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:23]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'b' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:24]
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'y' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v:26]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" Line 1. Module Sig doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Sig
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.fls
+Compiling module xil_defaultlib.sim_fls
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_fls_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 804.090 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" Line 1. Module Sig doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Sig
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.fls
+Compiling module xil_defaultlib.sim_fls
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_fls_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 930 ns : File "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 825.379 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" Line 1. Module Sig doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Sig
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.fls
+Compiling module xil_defaultlib.sim_fls
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_fls_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 390 ns : File "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 825.379 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim_fls' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim_fls_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls_new
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_fls
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim'
+"xelab -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a3e6c28c00034c1da2346da2d5ab8ceb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_fls_behav xil_defaultlib.sim_fls xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v" Line 1. Module Sig doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Sig
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.fls
+Compiling module xil_defaultlib.sim_fls
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_fls_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 310 ns : File "C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v" Line 52
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: fls_new
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1231.141 ; gain = 173.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fls_new' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:3]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'Sig' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Sig' (1#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (2#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+WARNING: [Synth 8-689] width (7) of port connection 'a' does not match port width (6) of module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:23]
+WARNING: [Synth 8-689] width (7) of port connection 'b' does not match port width (6) of module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:24]
+WARNING: [Synth 8-689] width (7) of port connection 'y' does not match port width (6) of module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'fls_new' (3#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.598 ; gain = 211.789
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.598 ; gain = 211.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.598 ; gain = 211.789
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+Finished Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1394.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1431.379 ; gain = 373.570
+10 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1431.379 ; gain = 604.324
+close_design
+set_property top alu_test [current_fileset]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu_test
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1431.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu_test' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:3]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'alu_test' (2#1) [C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1431.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1431.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1431.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+WARNING: [Vivado 12-584] No ports matched 'f[0]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[1]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[2]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[3]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[4]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[5]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[6]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[0]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[1]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[2]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[3]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[4]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[5]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[6]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1467.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1512.770 ; gain = 81.391
+7 Infos, 15 Warnings, 15 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1512.770 ; gain = 81.391
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Apr 18 21:53:18 2023] Launched synth_1...
+Run output will be captured here: C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+WARNING: [Vivado 12-584] No ports matched 'f[0]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[1]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[2]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[3]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[4]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[5]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f[6]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[0]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[1]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[2]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[3]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[4]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[5]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd[6]'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/constrs_1/new/con_fls.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1515.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+

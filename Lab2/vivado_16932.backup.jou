@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr 12 15:47:16 2023
+# Process ID: 16932
+# Current directory: C:/Users/expecto/Desktop/COD_Lab/Lab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16044 C:\Users\expecto\Desktop\COD_Lab\Lab2\Lab2.xpr
+# Log file: C:/Users/expecto/Desktop/COD_Lab/Lab2/vivado.log
+# Journal file: C:/Users/expecto/Desktop/COD_Lab/Lab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/constrs_1
+file mkdir C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/constrs_1/new
+close [ open C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/constrs_1/new/constrain.xdc w ]
+add_files -fileset constrs_1 C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/constrs_1/new/constrain.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target -xvc_url 202.38.79.134:35277
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/sim_1/new/sim_FIFO.v w ]
+add_files -fileset sim_1 C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.srcs/sim_1/new/sim_FIFO.v
+update_compile_order -fileset sim_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sim_FIFO [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source sim_FIFO.tcl
+current_wave_config {Untitled 1}
+add_wave {{/sim_FIFO/u_FIFO/register_file_8x4_0/regfile}} 
+current_wave_config {Untitled 1}
+add_wave {{/sim_FIFO/u_FIFO/LCU0}} 
+current_wave_config {Untitled 1}
+add_wave {{/sim_FIFO/u_FIFO/SDU0}} 
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
+launch_simulation
+source sim_FIFO.tcl
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/enq_edge}} 
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/deq_edge}} 
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/register_file_8x4_0/regfile}} 
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/LCU0/state}} 
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/LCU0/next_state}} 
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/we}} 
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/sim_FIFO/u_FIFO/LCU0/en}} 
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/expecto/Desktop/COD_Lab/Lab2/Lab2.runs/impl_1/FIFO.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+relaunch_sim
+relaunch_sim
+close_sim
+synth_design -rtl -name rtl_1

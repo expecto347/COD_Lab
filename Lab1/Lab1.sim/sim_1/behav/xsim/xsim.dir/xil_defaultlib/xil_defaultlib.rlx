@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v,1681824506,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v,,sim,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim_fls.v,1681825731,verilog,,,,sim_fls,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/Sig.v,1664284988,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v,,Sig,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v,1680524647,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v,,fls,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v,1680525084,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sim_1/new/sim.v,,fls_new,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/alu.v,1681825490,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls.v,,alu,,,,,,,,
+C:/Users/expecto/Desktop/COD_Lab/Lab1/alu_test.v,1680514669,verilog,,C:/Users/expecto/Desktop/COD_Lab/Lab1/Lab1.srcs/sources_1/new/fls_new.v,,alu_test,,,,,,,,
