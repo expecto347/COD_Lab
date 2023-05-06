@@ -1,0 +1,474 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 73929 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1681.812 ; gain = 152.719 ; free physical = 4114 ; free virtual = 7183
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Top.v:7]
+INFO: [Synth 8-6157] synthesizing module 'PDU' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/PDU.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Receive' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Receive.v:9]
+	Parameter DIV_CNT bound to: 10'b1101100011 
+	Parameter HDIV_CNT bound to: 10'b0110110001 
+	Parameter RX_CNT bound to: 4'b1000 
+	Parameter C_IDLE bound to: 1'b0 
+	Parameter C_RX bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Receive.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'Receive' (1#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Receive.v:9]
+INFO: [Synth 8-6157] synthesizing module 'Ded' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Ded.v:8]
+WARNING: [Synth 8-5788] Register sw_1_reg in module Ded is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Ded.v:26]
+WARNING: [Synth 8-5788] Register sw_2_reg in module Ded is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Ded.v:27]
+WARNING: [Synth 8-5788] Register sw_3_reg in module Ded is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Ded.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'Ded' (2#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Ded.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Decode' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:8]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DECODE bound to: 1 - type: integer 
+	Parameter SET_1 bound to: 10 - type: integer 
+	Parameter SET_2 bound to: 11 - type: integer 
+	Parameter SET_3 bound to: 12 - type: integer 
+	Parameter SET bound to: 13 - type: integer 
+	Parameter SET_DONE bound to: 14 - type: integer 
+	Parameter ADD_1 bound to: 20 - type: integer 
+	Parameter ADD_2 bound to: 21 - type: integer 
+	Parameter ADD_3 bound to: 22 - type: integer 
+	Parameter ADD bound to: 23 - type: integer 
+	Parameter ADD_DONE bound to: 24 - type: integer 
+	Parameter DEL_1 bound to: 30 - type: integer 
+	Parameter DEL_2 bound to: 31 - type: integer 
+	Parameter DEL_3 bound to: 32 - type: integer 
+	Parameter DEL bound to: 33 - type: integer 
+	Parameter DEL_DONE bound to: 34 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:57]
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:167]
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:182]
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'Decode' (3#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Decode.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Segment' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Segment.v:8]
+	Parameter TIME_1MS bound to: 100000 - type: integer 
+	Parameter SEG_NUM bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Segment' (4#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Segment.v:8]
+WARNING: [Synth 8-3848] Net uart_dout in module/entity PDU does not have driver. [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/PDU.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'PDU' (5#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/PDU.v:8]
+WARNING: [Synth 8-689] width (4) of port connection 'hex' does not match port width (32) of module 'PDU' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Top.v:50]
+INFO: [Synth 8-6157] synthesizing module 'Shift_reg' [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Shift_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Shift_reg' (6#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Shift_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (7#1) [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/Top.v:7]
+WARNING: [Synth 8-3331] design PDU has unconnected port uart_dout
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1735.562 ; gain = 206.469 ; free physical = 4138 ; free virtual = 7207
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1741.500 ; gain = 212.406 ; free physical = 4136 ; free virtual = 7206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1741.500 ; gain = 212.406 ; free physical = 4136 ; free virtual = 7205
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/constraints.xdc]
+Finished Parsing XDC File [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/root/COD_Lab/Lab3/Shift_reg/PDU_src/PDU_src/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1903.188 ; gain = 0.000 ; free physical = 4046 ; free virtual = 7115
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1903.188 ; gain = 0.000 ; free physical = 4046 ; free virtual = 7115
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4112 ; free virtual = 7182
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4112 ; free virtual = 7182
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4112 ; free virtual = 7181
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Decode'
+INFO: [Synth 8-5546] ROM "dout" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                  000000000000001 |                      00000000000
+                   SET_1 |                  000000000000010 |                      00000001010
+                   SET_2 |                  000000000000100 |                      00000001011
+                   SET_3 |                  000000000001000 |                      00000001100
+                     SET |                  000000000010000 |                      00000001101
+                SET_DONE |                  000000000100000 |                      00000001110
+                   ADD_1 |                  000000001000000 |                      00000010100
+                   ADD_2 |                  000000010000000 |                      00000010101
+                   ADD_3 |                  000000100000000 |                      00000010110
+                     ADD |                  000001000000000 |                      00000010111
+                ADD_DONE |                  000010000000000 |                      00000011000
+                   DEL_1 |                  000100000000000 |                      00000011110
+                   DEL_2 |                  001000000000000 |                      00000011111
+                     DEL |                  010000000000000 |                      00000100001
+                DEL_DONE |                  100000000000000 |                      00000100010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Decode'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4106 ; free virtual = 7176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	  17 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	  15 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 10    
+	  16 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 5     
+	   6 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  18 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+	   8 Input      1 Bit        Muxes := 8     
+	  15 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Receive 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 8     
+Module Ded 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	                8 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+Module Decode 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  17 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  15 Input     15 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 10    
+	  16 Input     11 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	  18 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  15 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+Module Segment 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module PDU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module Shift_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "pdu/decoder/dout" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design Top has port led[7] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[5] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[4] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[3] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[2] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[1] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port led[0] driven by constant 1
+WARNING: [Synth 8-3331] design Top has unconnected port uart_dout
+INFO: [Synth 8-3886] merging instance 'pdu/decoder/current_state_reg[10]' (FDCE) to 'pdu/decoder/current_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pdu/decoder/current_state_reg[9]' (FDCE) to 'pdu/decoder/current_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pdu/decoder/current_state_reg[8]' (FDCE) to 'pdu/decoder/current_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'pdu/decoder/current_state_reg[7]' (FDCE) to 'pdu/decoder/current_state_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pdu/decoder/current_state_reg[6] )
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[22]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[19]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[21]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[20]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[18]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[25]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_30/pdu/seg/cnt_1ms_reg[24]' (FDCE) to 'i_30/pdu/seg/cnt_1ms_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\pdu/seg/cnt_1ms_reg[23] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4083 ; free virtual = 7155
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3970 ; free virtual = 7043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3971 ; free virtual = 7043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3969 ; free virtual = 7042
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3969 ; free virtual = 7041
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3969 ; free virtual = 7041
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3971 ; free virtual = 7043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3971 ; free virtual = 7043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3971 ; free virtual = 7043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3970 ; free virtual = 7043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT2   |    54|
+|4     |LUT3   |    53|
+|5     |LUT4   |    25|
+|6     |LUT5   |    51|
+|7     |LUT6   |    69|
+|8     |MUXF7  |     4|
+|9     |FDCE   |   116|
+|10    |FDPE   |    23|
+|11    |FDRE   |    40|
+|12    |LDC    |     6|
+|13    |IBUF   |    11|
+|14    |OBUF   |    15|
+|15    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+----------+------+
+|      |Instance    |Module    |Cells |
++------+------------+----------+------+
+|1     |top         |          |   474|
+|2     |  pdu       |PDU       |   401|
+|3     |    decoder |Decode    |   160|
+|4     |    my_ded  |Ded       |    86|
+|5     |    rcv     |Receive   |   100|
+|6     |    seg     |Segment   |    55|
+|7     |  sreg      |Shift_reg |    45|
++------+------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 3970 ; free virtual = 7043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1903.188 ; gain = 212.406 ; free physical = 4022 ; free virtual = 7095
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1903.188 ; gain = 374.094 ; free physical = 4022 ; free virtual = 7095
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1909.125 ; gain = 0.000 ; free physical = 3970 ; free virtual = 7042
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LDC => LDCE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1909.125 ; gain = 531.289 ; free physical = 4069 ; free virtual = 7141
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1909.125 ; gain = 0.000 ; free physical = 4069 ; free virtual = 7141
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/root/COD_Lab/Lab3/Shift_reg/Shift_reg.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 19 17:47:57 2023...
