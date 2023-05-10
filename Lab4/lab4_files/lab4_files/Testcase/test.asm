@@ -1,28 +1,28 @@
 # Author: 2023_COD_TA
 # Last_edit: 20230416
-# ============================== ������ CPU ��ȷ�Բ��Գ��� ==============================
-# global pointer gp Ϊ x3 �Ĵ���
-# ���ļ��� gp ָʾ��ǰ���еĲ���
-# ���������к�pc��ֵΪ 0x0000301c �� 0x00003034������FAIL����ʱgpָʾ��һ��δͨ���Ĳ���
-# �ϰ���Կ��� led[1] ���𣬴�ʱ����ִ���쳣
+# ============================== 单周期 CPU 正确性测试程序 ==============================
+# global pointer gp 为 x3 寄存器
+# 在文件中 gp 指示当前进行的测试
+# 若连续运行后pc的值为 0x0000301c 到 0x00003034，代表FAIL，这时gp指示第一个未通过的测试
+# 上板可以看到 led[1] 亮起，此时程序执行异常
 
-# ���������к�pc��ֵΪ 0x0000324c �� 0x00003264������ȫ������ͨ��
-# �ϰ���Կ��� led[0] ���𣬴�ʱ����ִ������
+# 若连续运行后pc的值为 0x0000324c 到 0x00003264，代表全部测试通过
+# 上板可以看到 led[0] 亮起，此时程序执行正常
 
-# !!!!!!!!!!!!!!!! �벻Ҫ�޸ı����Գ���Ĵ��� !!!!!!!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!!!! 请不要修改本测试程序的代码 !!!!!!!!!!!!!!!!!!!!!!!
 # ======================================================================================
 
 
 # TEST 0 addi & beq test
-# �����ڴ˲���ʱ�������� ��ȷ����TEST1 ������������
+# 建议在此测试时单步运行 正确进入TEST1 后再连续运行
 .text
-	addi gp, x0, 0		# gp = 1 ���addiʵ����x0��Ϊ0
+	addi gp, x0, 0		# gp = 1 检测addi实现与x0设为0
 	addi x5, x0, 2		# x5 = 2
 	addi x6, x5, -3		# x6 = 0xffffffff
 	addi x8, x6, 1000	# x8 = 0x3e7
 	addi x7, x0, 999 	# x7 = 0x3e7
-	beq x5, x6, FAIL	# ��Ӧ��ת
-	beq x8, x7, TEST1	# Ӧ��ת
+	beq x5, x6, FAIL	# 不应跳转
+	beq x8, x7, TEST1	# 应跳转
 	
 FAIL:	
 	lui x7 7
@@ -31,7 +31,7 @@ FAIL:
 	addi x7 x7 0x100	# x7 = 7f00
 	addi x8 x0 1
 	sw x8 16(x7)		# led[1] = 0
-	beq x0, x0, FAIL	# ʧ��ʱ���ڴ˴���ѭ��
+	beq x0, x0, FAIL	# 失败时会在此处死循环
 	
 TEST1:	# add test	
 	addi gp, x0, 1		# gp = 1
@@ -111,7 +111,7 @@ TEST8:	# blt test
 	addi gp, x0, 8		# gp = 8
 	addi x5, x0, 1		# x5 = 1
 	addi, x6, x0, 2		# x6 = 2
-	addi x28, x0, 1 	# x28 = 1 ��ͨ��x28ȷ���ĸ��ֲ���ʱʧ��
+	addi x28, x0, 1 	# x28 = 1 可通过x28确定哪个分测试时失败
 	blt x6, x5, FAIL
 	addi x5, x5, 1		# x5 = 2
 	addi x28, x0, 2 	# x28 = 2
@@ -169,10 +169,10 @@ LOOP:	beq x5, x8, JMP
 	add x6, x5, x5
 	add x6, x6, x6		# x6 = 4 * x5
 	sw x5, 0(x6)	
-	addi x5, x5, 1		# ���ݶ�ǰ100��λ�ô�0��99
+	addi x5, x5, 1		# 数据段前100个位置存0到99
 	jal x7, LOOP		
 	beq x0, x0, FAIL
-JMP:	jalr x0, x7, 12		# ����COUNTǰһ��
+JMP:	jalr x0, x7, 12		# 跳至COUNT前一句
 	beq x0, x0, FAIL
 	addi x10, x0, 0
 COUNT:	add x11, x10, x10
@@ -180,7 +180,7 @@ COUNT:	add x11, x10, x10
 	lw x12, 0(x11)
 	add x30, x30, x12
 	addi x10, x10, 1
-	blt x10, x8, COUNT	# x30 ����0��99�ĺ� 0x1356
+	blt x10, x8, COUNT	# x30 储存0到99的和 0x1356
 	auipc x31, 0		# x31 = 0x3234
 	lui x29, -2		# x29 = 0xffffe000
 	add x28, x29, x31	# x28 = 0x1234
