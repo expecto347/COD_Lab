@@ -1,0 +1,147 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed May 10 20:29:31 2023
+| Host         : VM5818-Ubuntu running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    69 |
+|    Minimum number of control sets                        |    69 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   159 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    69 |
+| >= 0 to < 4        |    12 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    50 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            5 |
+| No           | No                    | Yes                    |              32 |           18 |
+| No           | Yes                   | No                     |             126 |           42 |
+| Yes          | No                    | No                     |            1000 |          555 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             581 |          203 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+--------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+|          Clock Signal         |                                        Enable Signal                                       |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
++-------------------------------+--------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG                | pdu/send/dout                                                                              | pdu/send/dout_i_1_n_0                          |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_71_out                                                                     |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_63_out                                                                     |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_55_out                                                                     |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_47_out                                                                     |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_39_out                                                                     |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_211_out                                                                    |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_113_out                                                                    |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_reg_015_out                                                                    |                                                |                1 |              1 |
+|  clk_IBUF_BUFG                |                                                                                            |                                                |                2 |              2 |
+|  wb_en                        |                                                                                            |                                                |                2 |              2 |
+|  memory/alu_op1_sel_reg_i_4_0 |                                                                                            |                                                |                1 |              2 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_cnt                                                                            | pdu/rcv/din_cnt[3]_i_1_n_0                     |                1 |              4 |
+|  clk_IBUF_BUFG                | pdu/send/tx_cnt                                                                            | pdu/send/dout_i_1_n_0                          |                2 |              5 |
+|  clk_IBUF_BUFG                | pdu/control/FSM_sequential_main_current_state[5]_i_1_n_0                                   | sw_IBUF[7]                                     |                6 |              6 |
+|  clk_IBUF_BUFG                | pdu/control/uart_out/E[0]                                                                  | sw_IBUF[7]                                     |                2 |              7 |
+|  clk_IBUF_BUFG                | pdu/rcv/din_vld0                                                                           | sw_IBUF[7]                                     |                4 |              8 |
+|  clk_IBUF_BUFG                |                                                                                            | pdu/rcv/div_cnt[9]_i_1_n_0                     |                4 |             10 |
+|  clk_IBUF_BUFG                |                                                                                            | pdu/send/div_cnt[9]_i_1__0_n_0                 |                4 |             10 |
+|  clk_IBUF_BUFG                |                                                                                            | pdu/control/uart_out/counter_10000T[0]_i_1_n_0 |                5 |             20 |
+|  clk_IBUF_BUFG                | pdu/control/cpu_clk_conter0                                                                | sw_IBUF[7]                                     |                7 |             21 |
+|  clk_IBUF_BUFG                |                                                                                            | pdu/seg/cnt_2ms[0]_i_1_n_0                     |                7 |             26 |
+|  clk_IBUF_BUFG                |                                                                                            | pdu/my_reg/cnt_100ms[0]_i_1_n_0                |                7 |             26 |
+|  clk_IBUF_BUFG                | memory/btn_r3_reg                                                                          | pdu/mmp/btn_status[31]_i_1_n_0                 |               18 |             31 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_22[0]                                                             |                                                |               22 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_25[0]                                                             |                                                |               16 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_24[0]                                                             |                                                |               12 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_23[0]                                                             |                                                |               16 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_17[0]                                                             |                                                |               19 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_21[0]                                                             |                                                |               19 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_20[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_2[0]                                                              |                                                |               19 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_19[0]                                                             |                                                |               13 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_18[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_11[0]                                                             |                                                |               16 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_26[0]                                                             |                                                |               13 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_27[0]                                                             |                                                |               21 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_28[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_29[0]                                                             |                                                |               18 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_3[0]                                                              |                                                |               16 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_30[0]                                                             |                                                |               23 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_4[0]                                                              |                                                |               18 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_5[0]                                                              |                                                |               20 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_6[0]                                                              |                                                |               20 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_7[0]                                                              |                                                |               23 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_9[0]                                                              |                                                |               23 |             32 |
+|  clk_IBUF_BUFG                | pdu/my_ded/E[0]                                                                            | sw_IBUF[7]                                     |               10 |             32 |
+|  clk_IBUF_BUFG                | pdu/control/bp_pc                                                                          | sw_IBUF[7]                                     |               12 |             32 |
+|  clk_IBUF_BUFG                | memory/seg_output[31]_i_5_1[0]                                                             | sw_IBUF[7]                                     |                7 |             32 |
+|  cpu_clk_BUFG                 |                                                                                            | pdu/control/AR[0]                              |               18 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_16[0]                                                             |                                                |               16 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_8[0]                                                              |                                                |               25 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_0[0]                                                              |                                                |               20 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_1[0]                                                              |                                                |               19 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_10[0]                                                             |                                                |               14 |             32 |
+|  clk_IBUF_BUFG                | pdu/mmp/pos_btn                                                                            | sw_IBUF[7]                                     |               14 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_12[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_13[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_14[0]                                                             |                                                |               15 |             32 |
+|  cpu_clk_BUFG                 | memory/wb_sel_reg[1]_i_3_15[0]                                                             |                                                |               16 |             32 |
+|  clk_IBUF_BUFG                | memory/E[0]                                                                                | sw_IBUF[7]                                     |               15 |             33 |
+|  clk_IBUF_BUFG                | memory/led0[31]_i_3_0[0]                                                                   | sw_IBUF[7]                                     |               15 |             33 |
+|  clk_IBUF_BUFG                | memory/led0[31]_i_3_1[0]                                                                   | sw_IBUF[7]                                     |               18 |             33 |
+|  clk_IBUF_BUFG                | memory/seg_output[31]_i_5_0[0]                                                             | sw_IBUF[7]                                     |               16 |             33 |
+|  clk_IBUF_BUFG                |                                                                                            | sw_IBUF[7]                                     |               15 |             34 |
+|  clk_IBUF_BUFG                | pdu/control/check_addr[31]_i_1_n_0                                                         | sw_IBUF[7]                                     |               13 |             40 |
+|  cpu_clk_BUFG                 | memory/DM/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0   |                                                |               32 |            128 |
+|  cpu_clk_BUFG                 | memory/DM/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0 |                                                |               32 |            128 |
+|  clk_IBUF_BUFG                | pdu/control/uart_out/code_r29[3]_i_1_n_0                                                   | sw_IBUF[7]                                     |               42 |            198 |
++-------------------------------+--------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+
+

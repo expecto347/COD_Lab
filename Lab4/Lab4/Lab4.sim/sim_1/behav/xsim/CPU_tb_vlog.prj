@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab4.srcs/sources_1/ip/DATA_MEM/sim/DATA_MEM.v" \
+"../../../../Lab4.srcs/sources_1/ip/INST_MEM/sim/INST_MEM.v" \
+"../../../../Lab4.srcs/sources_1/new/ALU.v" \
+"../../../../Lab4.srcs/sources_1/new/AND_jal.v" \
+"../../../../Lab4.srcs/sources_1/new/Branch.v" \
+"../../../../../lab4_files/lab4_files/PDU_src/源文件/CPU.v" \
+"../../../../Lab4.srcs/sources_1/new/CPU_DATA_CHECK.v" \
+"../../../../Lab4.srcs/sources_1/new/CTRL.v" \
+"../../../../Lab4.srcs/sources_1/new/IMM.v" \
+"../../../../../lab4_files/lab4_files/PDU_src/源文件/MEM.v" \
+"../../../../Lab4.srcs/sources_1/new/MUX.v" \
+"../../../../Lab4.srcs/sources_1/new/MUX_PC.v" \
+"../../../../Lab4.srcs/sources_1/new/MUX_RF.v" \
+"../../../../Lab4.srcs/sources_1/new/PC.v" \
+"../../../../Lab4.srcs/sources_1/new/PC_ADD_4.v" \
+"../../../../Lab4.srcs/sources_1/new/RF.v" \
+"../../../../../lab4_files/lab4_files/PDU_src/仿真/CPU_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
