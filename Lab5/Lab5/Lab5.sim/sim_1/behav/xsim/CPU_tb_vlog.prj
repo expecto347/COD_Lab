@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab5.srcs/sources_1/ip/DATA_MEM/sim/DATA_MEM.v" \
+"../../../../Lab5.srcs/sources_1/ip/INST_MEM/sim/INST_MEM.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/ALU.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/Branch.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/CPU.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/CTRL.v" \
+"../../../../../Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEG_SEL.v" \
+"../../../../../Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL.v" \
+"../../../../../Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL_HZD.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/Hazard.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/IMM.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/MEM.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/MUX.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/MUX_PC.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/MUX_RFwrite.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/PC.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/RF.v" \
+"../../../../../Lab5_files/Lab5_files/TOP/myCPU/SEG_REG.v" \
+"../../../../../Lab5_files/Lab5_files/CPU_src/仿真/CPU_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

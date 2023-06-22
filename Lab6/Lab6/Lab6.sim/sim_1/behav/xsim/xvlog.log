@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/Lab6/Lab6.srcs/sources_1/ip/main_memory/sim/main_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/cache/cache/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM_bytewrite
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/cache/cache/BRAM_common.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM_common
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/cache/cache/axi_arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/cache/cache/dcache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dcache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/root/COD_Lab/Lab6/cache/cache/icache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module icache

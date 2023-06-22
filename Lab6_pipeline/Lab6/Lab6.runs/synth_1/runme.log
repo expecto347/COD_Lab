@@ -1,0 +1,1042 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33780 
+WARNING: [Synth 8-6901] identifier 'pause_pop' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:253]
+WARNING: [Synth 8-6901] identifier 'pause_reg' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:253]
+WARNING: [Synth 8-6901] identifier 'flush_reg' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:253]
+WARNING: [Synth 8-6901] identifier 'pause_pop' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:194]
+WARNING: [Synth 8-6901] identifier 'pause_reg' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:194]
+WARNING: [Synth 8-6901] identifier 'flush_reg' is used before its declaration [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:194]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1695.359 ; gain = 159.625 ; free physical = 11310 ; free virtual = 12943
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [/root/COD_Lab/Lab6_pipeline/modules/Top.v:6]
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+	Parameter WORD_OFFSET_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CPU' [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:8]
+	Parameter LOAD bound to: 7'b0000011 
+	Parameter STORE bound to: 7'b0100011 
+INFO: [Synth 8-6157] synthesizing module 'PC' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ADDER_PC' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/ADDER_PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ADDER_PC' (2#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/ADDER_PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SEG_REG' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/SEG_REG.v:1]
+	Parameter NONE_BR bound to: 3'b000 
+INFO: [Synth 8-6155] done synthesizing module 'SEG_REG' (3#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/SEG_REG.v:1]
+WARNING: [Synth 8-7023] instance 'IF1_IF2' of module 'SEG_REG' has 76 connections declared, but only 43 given [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:248]
+WARNING: [Synth 8-7023] instance 'IF2_ID' of module 'SEG_REG' has 76 connections declared, but only 47 given [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:306]
+INFO: [Synth 8-6157] synthesizing module 'RF' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/RF.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter ADDRNUM bound to: 5 - type: integer 
+	Parameter REGNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RF' (4#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/RF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IMM' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/IMM.v:1]
+	Parameter R_type bound to: 7'b0110011 
+	Parameter I_type bound to: 7'b0010011 
+	Parameter S_type bound to: 7'b0100011 
+	Parameter B_type bound to: 7'b1100011 
+	Parameter class_load bound to: 7'b0000011 
+	Parameter U_type_lui bound to: 7'b0110111 
+	Parameter U_type_auipc bound to: 7'b0010111 
+	Parameter J_type bound to: 7'b1101111 
+	Parameter JALR bound to: 7'b1100111 
+INFO: [Synth 8-6155] done synthesizing module 'IMM' (5#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/IMM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CTRL' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/CTRL.v:1]
+	Parameter R_type bound to: 7'b0110011 
+	Parameter I_type bound to: 7'b0010011 
+	Parameter ADD bound to: 4'b0000 
+	Parameter SLL bound to: 4'b1001 
+	Parameter SRL bound to: 4'b1000 
+	Parameter SUB bound to: 4'b0001 
+	Parameter OR bound to: 4'b0110 
+	Parameter AND bound to: 4'b0101 
+	Parameter XOR bound to: 4'b0111 
+	Parameter SLT bound to: 4'b1010 
+	Parameter S_type bound to: 7'b0100011 
+	Parameter B_type bound to: 7'b1100011 
+	Parameter class_load bound to: 7'b0000011 
+	Parameter U_type_auipc bound to: 7'b0010111 
+	Parameter U_type_lui bound to: 7'b0110111 
+	Parameter J_type bound to: 7'b1101111 
+	Parameter JALR bound to: 7'b1100111 
+	Parameter ALU_RES bound to: 2'b00 
+	Parameter PC_ADD4 bound to: 2'b01 
+	Parameter MEM_RD bound to: 2'b10 
+	Parameter IMM bound to: 2'b11 
+	Parameter RS1 bound to: 1'b0 
+	Parameter PC_CUR bound to: 1'b1 
+	Parameter RS2 bound to: 1'b0 
+	Parameter IMMGEN bound to: 1'b1 
+	Parameter NONE_BR bound to: 3'b000 
+	Parameter BEQ bound to: 3'b001 
+	Parameter BLT bound to: 3'b010 
+	Parameter BNE bound to: 3'b011 
+	Parameter BGE bound to: 3'b100 
+	Parameter BLTU bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'CTRL' (6#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/CTRL.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MUX' (7#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Branch' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Branch.v:1]
+	Parameter NONE_BR bound to: 3'b000 
+	Parameter BEQ bound to: 3'b001 
+	Parameter BLT bound to: 3'b010 
+	Parameter BNE bound to: 3'b011 
+	Parameter BGE bound to: 3'b100 
+	Parameter BLTU bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'Branch' (8#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Branch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC_pre' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC_pre.v:1]
+	Parameter B_type bound to: 7'b1100011 
+	Parameter J_type bound to: 7'b1101111 
+	Parameter JALR bound to: 7'b1100111 
+INFO: [Synth 8-6155] done synthesizing module 'PC_pre' (9#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC_pre.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX_PC' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX_PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_PC' (10#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX_PC.v:1]
+WARNING: [Synth 8-7023] instance 'ID_EX' of module 'SEG_REG' has 76 connections declared, but only 67 given [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:443]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/ALU.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (11#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/ALU.v:1]
+WARNING: [Synth 8-7023] instance 'ALU' of module 'ALU' has 5 connections declared, but only 4 given [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:530]
+WARNING: [Synth 8-7023] instance 'EX_MEM' of module 'SEG_REG' has 76 connections declared, but only 75 given [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:551]
+INFO: [Synth 8-6157] synthesizing module 'MUX_RFwrite' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX_RFwrite.v:1]
+	Parameter ALU_RES bound to: 2'b00 
+	Parameter PC_ADD4 bound to: 2'b01 
+	Parameter MEM_RD bound to: 2'b10 
+	Parameter IMM bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'MUX_RFwrite' (12#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/MUX_RFwrite.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Hazard' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Hazard.v:1]
+	Parameter ALU_RES bound to: 2'b00 
+	Parameter PC_ADD4 bound to: 2'b01 
+	Parameter MEM_RD bound to: 2'b10 
+	Parameter IMM bound to: 2'b11 
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Hazard.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard' (13#1) [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Hazard.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (14#1) [/root/COD_Lab/Lab6_pipeline/modules/CPU.v:8]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [/root/COD_Lab/Lab6_pipeline/modules/MEM.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_arbiter' [/root/COD_Lab/Lab6_pipeline/modules/cache/axi_arbiter.v:1]
+	Parameter R_IDLE bound to: 3'b000 
+	Parameter I_AR bound to: 3'b001 
+	Parameter I_R bound to: 3'b010 
+	Parameter D_AR bound to: 3'b011 
+	Parameter D_R bound to: 3'b100 
+	Parameter W_IDLE bound to: 3'b000 
+	Parameter D_AW bound to: 3'b001 
+	Parameter D_W bound to: 3'b010 
+	Parameter D_B bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'axi_arbiter' (15#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/axi_arbiter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'main_memory' [/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.runs/synth_1/.Xil/Vivado-33730-VM5818-Ubuntu/realtime/main_memory_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_memory' (16#1) [/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.runs/synth_1/.Xil/Vivado-33730-VM5818-Ubuntu/realtime/main_memory_stub.v:6]
+WARNING: [Synth 8-7023] instance 'main_mem' of module 'main_memory' has 33 connections declared, but only 31 given [/root/COD_Lab/Lab6_pipeline/modules/MEM.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (17#1) [/root/COD_Lab/Lab6_pipeline/modules/MEM.v:4]
+INFO: [Synth 8-6157] synthesizing module 'icache' [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:17]
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+	Parameter WORD_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter BYTE_OFFSET_WIDTH bound to: 4 - type: integer 
+	Parameter TAG_WIDTH bound to: 24 - type: integer 
+	Parameter SET_NUM bound to: 16 - type: integer 
+	Parameter WORD_NUM bound to: 4 - type: integer 
+	Parameter BYTE_NUM bound to: 16 - type: integer 
+	Parameter BIT_NUM bound to: 128 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter LOOKUP bound to: 3'b001 
+	Parameter MISS bound to: 3'b010 
+	Parameter REFILL bound to: 3'b011 
+	Parameter PAUSE bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'BRAM_common' [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:1]
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BRAM_common' (18#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BRAM_common__parameterized0' [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:1]
+	Parameter DATA_WIDTH bound to: 25 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BRAM_common__parameterized0' (18#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:1]
+WARNING: [Synth 8-6014] Unused sequential element total_time_reg was removed.  [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:359]
+WARNING: [Synth 8-6014] Unused sequential element total_hit_reg was removed.  [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:360]
+INFO: [Synth 8-6155] done synthesizing module 'icache' (19#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:17]
+INFO: [Synth 8-6157] synthesizing module 'dcache' [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:17]
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+	Parameter WORD_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter BYTE_OFFSET_WIDTH bound to: 4 - type: integer 
+	Parameter TAG_WIDTH bound to: 24 - type: integer 
+	Parameter SET_NUM bound to: 16 - type: integer 
+	Parameter WORD_NUM bound to: 4 - type: integer 
+	Parameter BYTE_NUM bound to: 16 - type: integer 
+	Parameter BIT_NUM bound to: 128 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter LOOKUP bound to: 3'b001 
+	Parameter MISS bound to: 3'b010 
+	Parameter REFILL bound to: 3'b011 
+	Parameter WAIT_WRITE bound to: 3'b100 
+	Parameter PAUSE bound to: 3'b101 
+	Parameter INIT bound to: 3'b000 
+	Parameter WRITE bound to: 3'b001 
+	Parameter FINISH bound to: 3'b010 
+INFO: [Synth 8-6157] synthesizing module 'BRAM_bytewrite' [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM.v:1]
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BRAM_bytewrite' (20#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:485]
+INFO: [Synth 8-155] case statement is not full and has no default [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:601]
+WARNING: [Synth 8-6014] Unused sequential element total_time_reg was removed.  [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:620]
+WARNING: [Synth 8-6014] Unused sequential element total_hit_reg was removed.  [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:621]
+INFO: [Synth 8-6155] done synthesizing module 'dcache' (21#1) [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (22#1) [/root/COD_Lab/Lab6_pipeline/modules/Top.v:6]
+WARNING: [Synth 8-3331] design axi_arbiter has unconnected port rresp[1]
+WARNING: [Synth 8-3331] design axi_arbiter has unconnected port rresp[0]
+WARNING: [Synth 8-3331] design axi_arbiter has unconnected port bresp[1]
+WARNING: [Synth 8-3331] design axi_arbiter has unconnected port bresp[0]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[31]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[30]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[29]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[28]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[27]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[26]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[25]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[24]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[23]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[22]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[21]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[20]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[19]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[18]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[17]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[16]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[15]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[14]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[13]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[12]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[11]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[10]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[9]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[8]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[7]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[31]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[29]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[28]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[27]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[26]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[25]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[24]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[23]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[22]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[21]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[20]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[19]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[18]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[17]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[16]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[15]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[11]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[10]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[9]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[8]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1749.266 ; gain = 213.531 ; free physical = 11300 ; free virtual = 12935
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1767.078 ; gain = 231.344 ; free physical = 11305 ; free virtual = 12940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1767.078 ; gain = 231.344 ; free physical = 11305 ; free virtual = 12940
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.srcs/sources_1/ip/main_memory/main_memory/main_memory_in_context.xdc] for cell 'memory/main_mem'
+Finished Parsing XDC File [/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.srcs/sources_1/ip/main_memory/main_memory/main_memory_in_context.xdc] for cell 'memory/main_mem'
+Parsing XDC File [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'btn'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'uart_din'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'uart_dout'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:52]
+Finished Parsing XDC File [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1962.609 ; gain = 0.000 ; free physical = 11192 ; free virtual = 12826
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1962.609 ; gain = 0.000 ; free physical = 11193 ; free virtual = 12827
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/main_mem' at clock pin 's_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11297 ; free virtual = 12932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11297 ; free virtual = 12932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for memory/main_mem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11299 ; free virtual = 12933
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "rf_re0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "rf_re1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "wb_en" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "alu_op1_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "alu_op2_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jalr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_we" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'r_crt_reg' in module 'axi_arbiter'
+INFO: [Synth 8-802] inferred FSM for state register 'w_crt_reg' in module 'axi_arbiter'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'icache'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dcache'
+INFO: [Synth 8-802] inferred FSM for state register 'wfsm_state_reg' in module 'dcache'
+WARNING: [Synth 8-327] inferring latch for variable 'pc_jal_br_id_reg' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC_pre.v:16]
+WARNING: [Synth 8-327] inferring latch for variable 'pc_jalr_id_reg' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/PC_pre.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'OF_reg' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/ALU.v:14]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_rd0_fd_reg' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Hazard.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_rd1_fd_reg' [/root/COD_Lab/Lab6_pipeline/modules/pipeline/CPU_core/Hazard.v:53]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                              000 |                              000
+                    D_AR |                              001 |                              011
+                     D_R |                              010 |                              100
+                    I_AR |                              011 |                              001
+                     I_R |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_crt_reg' using encoding 'sequential' in module 'axi_arbiter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  W_IDLE |                               00 |                              000
+                    D_AW |                               01 |                              001
+                     D_W |                               10 |                              010
+                     D_B |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_crt_reg' using encoding 'sequential' in module 'axi_arbiter'
+INFO: [Synth 8-6430] The Block RAM "BRAM_common:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+                  LOOKUP |                            00010 |                              001
+                    MISS |                            00100 |                              010
+                  REFILL |                            01000 |                              011
+                   PAUSE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'icache'
+INFO: [Synth 8-6430] The Block RAM "BRAM_bytewrite:/genblk1[1].ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                               00 |                              000
+                   WRITE |                               01 |                              001
+                  FINISH |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wfsm_state_reg' using encoding 'sequential' in module 'dcache'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                           000001 |                              000
+                  LOOKUP |                           000010 |                              001
+                    MISS |                           000100 |                              010
+                  REFILL |                           001000 |                              011
+              WAIT_WRITE |                           010000 |                              100
+                   PAUSE |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'dcache'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11280 ; free virtual = 12916
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 3     
+	               68 Bit    Registers := 1     
+	               32 Bit    Registers := 127   
+	               16 Bit    Registers := 2     
+	                5 Bit    Registers := 15    
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 62    
++---RAMs : 
+	               2K Bit         RAMs := 4     
+	              400 Bit         RAMs := 4     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 63    
+	   2 Input     32 Bit        Muxes := 127   
+	   6 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 11    
+	   5 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 8     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 11    
+	   3 Input     16 Bit        Muxes := 4     
+	   6 Input     16 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 10    
+	   2 Input      5 Bit        Muxes := 22    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 16    
+	   8 Input      4 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 11    
+	   9 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 110   
+	  10 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 33    
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 147   
+	  10 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 10    
+	   9 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 13    
+	  16 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 69    
+	   6 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ADDER_PC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module SEG_REG 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 18    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 18    
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module RF 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 31    
+Module IMM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+Module CTRL 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 8     
+Module MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module PC_pre 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module MUX_PC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   9 Input      1 Bit        Muxes := 2     
+Module MUX_RFwrite 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module Hazard 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 16    
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+Module CPU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module axi_arbiter 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 6     
+Module BRAM_common 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module BRAM_common__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	              400 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module icache 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 3     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 49    
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 16    
+	  16 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 49    
+	   3 Input      1 Bit        Muxes := 32    
+Module BRAM_bytewrite 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 30    
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module dcache 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               68 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 11    
+	   3 Input     16 Bit        Muxes := 4     
+	   6 Input     16 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 17    
+	   2 Input      2 Bit        Muxes := 52    
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 51    
+	   3 Input      1 Bit        Muxes := 37    
+	   6 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5587] ROM size for "rf_re0" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "rf_re1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "wb_en" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "alu_op1_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "alu_op2_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jalr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_we" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'tagv_mem1/addr_r_reg[3:0]' into 'tagv_mem0/addr_r_reg[3:0]' [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:21]
+INFO: [Synth 8-4471] merging register 'tagv_mem1/addr_r_reg[3:0]' into 'tagv_mem0/addr_r_reg[3:0]' [/root/COD_Lab/Lab6_pipeline/modules/cache/BRAM_common.v:21]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[31]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[30]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[29]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[28]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[27]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[26]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[25]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[24]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[23]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[22]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[21]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[20]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[19]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[18]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[17]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[16]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[15]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[14]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[13]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[12]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[11]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[10]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[9]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[8]
+WARNING: [Synth 8-3331] design PC_pre has unconnected port inst_id[7]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[31]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[29]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[28]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[27]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[26]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[25]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[24]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[23]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[22]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[21]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[20]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[19]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[18]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[17]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[16]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[15]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[11]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[10]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[9]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[8]
+WARNING: [Synth 8-3331] design CTRL has unconnected port inst[7]
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "Top/icache_dut/data_mem0/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "Top/icache_dut/data_mem1/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem0/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem0/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "dcache_dut/data_mem0/genblk1[1].ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem1/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem1/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "dcache_dut/data_mem1/genblk1[1].ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM icache_dut/data_mem1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem0/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_mem1/genblk1[1].ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-3332] Sequential element (OF_reg) is unused and will be removed from module ALU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11248 ; free virtual = 12890
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name     | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|BRAM_common:    | ram_reg            | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_common:    | ram_reg            | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_bytewrite: | genblk1[1].ram_reg | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_bytewrite: | genblk1[1].ram_reg | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------+-----------+----------------------+--------------+
+|Top         | icache_dut/tagv_mem0/ram_reg | Implied   | 16 x 25              | RAM32M x 5   | 
+|Top         | icache_dut/tagv_mem1/ram_reg | Implied   | 16 x 25              | RAM32M x 5   | 
+|dcache_dut  | tagv_mem0/ram_reg            | Implied   | 16 x 25              | RAM32M x 5   | 
+|dcache_dut  | tagv_mem1/ram_reg            | Implied   | 16 x 25              | RAM32M x 5   | 
++------------+------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/icache_dut/data_mem0/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/icache_dut/data_mem0/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/icache_dut/data_mem1/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/icache_dut/data_mem1/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/i_0/data_mem0/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/i_0/data_mem0/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/i_1/data_mem1/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/i_1/data_mem1/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11132 ; free virtual = 12774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 1968.547 ; gain = 432.812 ; free physical = 11104 ; free virtual = 12742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name     | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|BRAM_common:    | ram_reg            | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_common:    | ram_reg            | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_bytewrite: | genblk1[1].ram_reg | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|BRAM_bytewrite: | genblk1[1].ram_reg | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++----------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++------------+------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------+-----------+----------------------+--------------+
+|Top         | icache_dut/tagv_mem0/ram_reg | Implied   | 16 x 25              | RAM32M x 5   | 
+|Top         | icache_dut/tagv_mem1/ram_reg | Implied   | 16 x 25              | RAM32M x 5   | 
+|dcache_dut  | tagv_mem0/ram_reg            | Implied   | 16 x 25              | RAM32M x 5   | 
+|dcache_dut  | tagv_mem1/ram_reg            | Implied   | 16 x 25              | RAM32M x 5   | 
++------------+------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (cpu/pre_PC/pc_jalr_id_reg[0]) is unused and will be removed from module Top.
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[15].lru_reg_reg[15][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[15][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[14].lru_reg_reg[14][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[14][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[13].lru_reg_reg[13][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[13][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[12].lru_reg_reg[12][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[12][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[11].lru_reg_reg[11][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[11][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[10].lru_reg_reg[10][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[10][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[9].lru_reg_reg[9][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[9][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[8].lru_reg_reg[8][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[8][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[7].lru_reg_reg[7][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[7][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[6].lru_reg_reg[6][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[6][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[5].lru_reg_reg[5][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[5][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[4].lru_reg_reg[4][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[4][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[3].lru_reg_reg[3][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[3][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[2].lru_reg_reg[2][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[2][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[1].lru_reg_reg[1][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[1][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\icache_dut/genblk2[0].lru_reg_reg[0][0] ) from module (Top) as it has self-loop and (\icache_dut/lru_reg_reg[0][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/icache.v:209]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[0].lru_reg_reg[0][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[0][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[1].lru_reg_reg[1][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[1][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[2].lru_reg_reg[2][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[2][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[3].lru_reg_reg[3][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[3][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[4].lru_reg_reg[4][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[4][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[5].lru_reg_reg[5][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[5][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[6].lru_reg_reg[6][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[6][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[7].lru_reg_reg[7][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[7][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[8].lru_reg_reg[8][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[8][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[9].lru_reg_reg[9][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[9][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[10].lru_reg_reg[10][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[10][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[11].lru_reg_reg[11][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[11][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[12].lru_reg_reg[12][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[12][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[13].lru_reg_reg[13][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[13][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[14].lru_reg_reg[14][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[14][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-5966] Removing register instance (\dcache_dut/genblk2[15].lru_reg_reg[15][0] ) from module (Top) as it has self-loop and (\dcache_dut/lru_reg_reg[15][0] ) is actual driver [/root/COD_Lab/Lab6_pipeline/modules/cache/dcache.v:268]
+INFO: [Synth 8-6837] The timing for the instance icache_dut/data_mem0/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance icache_dut/data_mem0/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance icache_dut/data_mem1/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance icache_dut/data_mem1/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/data_mem0/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/data_mem0/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/data_mem1/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dcache_dut/data_mem1/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 1983.555 ; gain = 447.820 ; free physical = 11099 ; free virtual = 12737
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12731
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12731
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11094 ; free virtual = 12731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |main_memory   |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |main_memory |     1|
+|2     |BUFG        |     4|
+|3     |CARRY4      |    70|
+|4     |LUT1        |     3|
+|5     |LUT2        |   531|
+|6     |LUT3        |   130|
+|7     |LUT4        |   361|
+|8     |LUT5        |   495|
+|9     |LUT6        |  1948|
+|10    |MUXF7       |   260|
+|11    |RAM32M      |    20|
+|12    |RAMB36E1    |     8|
+|13    |FDRE        |  2326|
+|14    |FDSE        |    12|
+|15    |LD          |    63|
+|16    |LDC         |    64|
+|17    |IBUF        |     2|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------------------+------------------------------+------+
+|      |Instance             |Module                        |Cells |
++------+---------------------+------------------------------+------+
+|1     |top                  |                              |  6349|
+|2     |  cpu                |CPU                           |  4408|
+|3     |    ALU_MUX1         |MUX                           |    32|
+|4     |    ALU_MUX2         |MUX_5                         |    25|
+|5     |    EX_MEM           |SEG_REG                       |   322|
+|6     |    Hazard           |Hazard                        |    65|
+|7     |    ID_EX            |SEG_REG_6                     |   909|
+|8     |    IF1_IF2          |SEG_REG_7                     |   129|
+|9     |    IF2_ID           |SEG_REG_8                     |   387|
+|10    |    IMM              |IMM                           |     5|
+|11    |    MEM_WB           |SEG_REG_9                     |   383|
+|12    |    PC               |PC                            |    65|
+|13    |    PC_adder         |ADDER_PC                      |    40|
+|14    |    RD_MUX1          |MUX_10                        |    32|
+|15    |    RD_MUX2          |MUX_11                        |    32|
+|16    |    RF               |RF                            |  1856|
+|17    |    RF_writeback_MUX |MUX_RFwrite                   |    32|
+|18    |    pre_PC           |PC_pre                        |    94|
+|19    |  dcache_dut         |dcache                        |  1271|
+|20    |    data_mem0        |BRAM_bytewrite                |   398|
+|21    |    data_mem1        |BRAM_bytewrite_2              |   141|
+|22    |    tagv_mem0        |BRAM_common__parameterized0_3 |   139|
+|23    |    tagv_mem1        |BRAM_common__parameterized0_4 |    68|
+|24    |  icache_dut         |icache                        |   553|
+|25    |    data_mem0        |BRAM_common                   |   114|
+|26    |    data_mem1        |BRAM_common_0                 |    40|
+|27    |    tagv_mem0        |BRAM_common__parameterized0   |    39|
+|28    |    tagv_mem1        |BRAM_common__parameterized0_1 |    92|
+|29    |  memory             |MEM                           |   111|
+|30    |    axi_arbiter_dut  |axi_arbiter                   |    58|
++------+---------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.523 ; gain = 450.789 ; free physical = 11093 ; free virtual = 12731
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:17 . Memory (MB): peak = 1986.523 ; gain = 249.320 ; free physical = 11147 ; free virtual = 12785
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 1986.531 ; gain = 450.789 ; free physical = 11147 ; free virtual = 12785
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 485 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2018.539 ; gain = 0.000 ; free physical = 11092 ; free virtual = 12728
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 147 instances were transformed.
+  LD => LDCE: 63 instances
+  LDC => LDCE: 64 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 20 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+145 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:31 . Memory (MB): peak = 2018.539 ; gain = 602.117 ; free physical = 11213 ; free virtual = 12848
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2018.539 ; gain = 0.000 ; free physical = 11213 ; free virtual = 12848
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 14 22:37:01 2023...

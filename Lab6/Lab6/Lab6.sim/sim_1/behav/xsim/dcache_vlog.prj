@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../cache/cache/BRAM.v" \
+"../../../../../cache/cache/BRAM_common.v" \
+"../../../../../cache/cache/dcache.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

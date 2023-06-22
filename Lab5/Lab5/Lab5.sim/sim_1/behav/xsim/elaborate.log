@@ -1,0 +1,13 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /opt/vlab/vivado/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 8314b3d8d8d44b89b738fc1c206acad3 --incr --debug typical --relax --mt 8 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_tb_behav xil_defaultlib.CPU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'rf_ra0_ex' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:834]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'rf_ra1_ex' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:835]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'pc_sel_ex' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:837]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'pc_sel' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:746]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'pc_sel' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:784]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'pc_sel' [/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v:822]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

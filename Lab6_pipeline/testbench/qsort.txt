@@ -1,0 +1,138 @@
+
+/home/madrid/Desktop/ysyx-workbench/am-kernels/tests/cpu-tests/build/qsort-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00000413          	li	s0,0
+   4:	00001117          	auipc	sp,0x1
+   8:	7fc10113          	add	sp,sp,2044 # 1800 <_end>
+   c:	1c4000ef          	jal	1d0 <_trm_init>
+
+00000010 <check>:
+  10:	00050463          	beqz	a0,18 <check+0x8>
+  14:	00008067          	ret
+  18:	ff010113          	add	sp,sp,-16
+  1c:	00100513          	li	a0,1
+  20:	00112623          	sw	ra,12(sp)
+  24:	188000ef          	jal	1ac <halt>
+
+00000028 <sort>:
+  28:	fe010113          	add	sp,sp,-32
+  2c:	01312623          	sw	s3,12(sp)
+  30:	01512223          	sw	s5,4(sp)
+  34:	00112e23          	sw	ra,28(sp)
+  38:	00812c23          	sw	s0,24(sp)
+  3c:	00912a23          	sw	s1,20(sp)
+  40:	01212823          	sw	s2,16(sp)
+  44:	01412423          	sw	s4,8(sp)
+  48:	fff58993          	add	s3,a1,-1                //s3 = r-1
+  4c:	00058a93          	mv	s5,a1                   //s5 = r
+  50:	0b350663          	beq	a0,s3,fc <sort+0xd4>    //if l == r-1
+  54:	08b55263          	bge	a0,a1,d8 <sort+0xb0>    //if l >= r, return
+  58:	00259a13          	sll	s4,a1,0x2
+  5c:	1ec00913          	li	s2,492                  //nums base
+  60:	014904b3          	add	s1,s2,s4                //s1 = &nums[r]
+  64:	0d555263          	bge	a0,s5,128 <sort+0x100>  //if l >= r,
+  68:	00251793          	sll	a5,a0,0x2
+  6c:	00f907b3          	add	a5,s2,a5                //a5 = &nums[l](a5 = i(int align))
+  70:	00050413          	mv	s0,a0                   //s0 = l(s0 == j)
+  74:	0007a683          	lw	a3,0(a5)                //a3 = nums[i]  //while start-----------
+  78:	0004a603          	lw	a2,0(s1)                //a2 = nums[r]
+  7c:	00241713          	sll	a4,s0,0x2
+  80:	00e90733          	add	a4,s2,a4                //a4 = &nums[j]
+  84:	00c6da63          	bge	a3,a2,98 <sort+0x70>    //if nums[l] >= nums[r]
+  88:	00072603          	lw	a2,0(a4)                //a2 = nums[j]
+  8c:	00140413          	add	s0,s0,1                 //j++
+  90:	00c7a023          	sw	a2,0(a5)
+  94:	00d72023          	sw	a3,0(a4)
+  98:	00478793          	add	a5,a5,4                 //i++(int align)
+  9c:	fc979ce3          	bne	a5,s1,74 <sort+0x4c>    //if i != r   //while end----------------
+  a0:	000a8793          	mv	a5,s5                   //a5 = r
+  a4:	00241713          	sll	a4,s0,0x2
+  a8:	00e90733          	add	a4,s2,a4                //a4 = &nums[j]
+  ac:	00279793          	sll	a5,a5,0x2
+  b0:	00072603          	lw	a2,0(a4)
+  b4:	00f907b3          	add	a5,s2,a5                //a5 = &nums[r]
+  b8:	0007a683          	lw	a3,0(a5)
+  bc:	fff40593          	add	a1,s0,-1                //a1 = j - 1
+  c0:	00c7a023          	sw	a2,0(a5)
+  c4:	00d72023          	sw	a3,0(a4)                //swap complete
+  c8:	f61ff0ef          	jal	28 <sort>               //sort(l, j - 1)
+  cc:	00140513          	add	a0,s0,1                 //a0 = j + 1
+  d0:	03350a63          	beq	a0,s3,104 <sort+0xdc>   //if j + 1 == r - 1, preprocess
+  d4:	f95548e3          	blt	a0,s5,64 <sort+0x3c>    //if j + 1 < r,      preprocess
+  d8:	01c12083          	lw	ra,28(sp)               //return entry
+  dc:	01812403          	lw	s0,24(sp)
+  e0:	01412483          	lw	s1,20(sp)
+  e4:	01012903          	lw	s2,16(sp)
+  e8:	00c12983          	lw	s3,12(sp)
+  ec:	00812a03          	lw	s4,8(sp)
+  f0:	00412a83          	lw	s5,4(sp)
+  f4:	02010113          	add	sp,sp,32
+  f8:	00008067          	ret
+  fc:	00259a13          	sll	s4,a1,0x2               //l == r-1 here, int size align
+ 100:	1ec00913          	li	s2,492                  //nums base
+ 104:	00299793          	sll	a5,s3,0x2               //int size align
+ 108:	00f907b3          	add	a5,s2,a5
+ 10c:	01490933          	add	s2,s2,s4
+ 110:	0007a703          	lw	a4,0(a5)                //nums[l]
+ 114:	00092683          	lw	a3,0(s2)                //nums[r]
+ 118:	fce6d0e3          	bge	a3,a4,d8 <sort+0xb0>    //if nums[l] <= nums[r]
+ 11c:	00d7a023          	sw	a3,0(a5)                //swap
+ 120:	00e92023          	sw	a4,0(s2)
+ 124:	fb5ff06f          	j	d8 <sort+0xb0>            //return
+ 128:	00050413          	mv	s0,a0
+ 12c:	00050793          	mv	a5,a0
+ 130:	f75ff06f          	j	a4 <sort+0x7c>
+
+00000134 <main>:
+ 134:	ff010113          	add	sp,sp,-16
+ 138:	00812423          	sw	s0,8(sp)
+ 13c:	1e802583          	lw	a1,488(zero) # 1e8 <N>  //a1 = N, N == 256
+ 140:	00000513          	li	a0,0                    //l = 0
+ 144:	00112623          	sw	ra,12(sp)
+ 148:	fff58593          	add	a1,a1,-1                //a1 = r
+ 14c:	00912223          	sw	s1,4(sp)                //
+ 150:	01212023          	sw	s2,0(sp)                //
+ 154:	ed5ff0ef          	jal	28 <sort>
+ 158:	1e802783          	lw	a5,488(zero) # 1e8 <N>  //a5 = N
+ 15c:	00100713          	li	a4,1
+ 160:	02f75863          	bge	a4,a5,190 <main+0x5c>   //if 1 >= N
+ 164:	fff78913          	add	s2,a5,-1                //s2 = N-1
+ 168:	1ec00413          	li	s0,492                  //nums base
+ 16c:	00000493          	li	s1,0
+ 170:	00042503          	lw	a0,0(s0)
+ 174:	00442783          	lw	a5,4(s0)
+ 178:	00148493          	add	s1,s1,1
+ 17c:	00440413          	add	s0,s0,4
+ 180:	00a7a533          	slt	a0,a5,a0                //if a5 < a0, set a0
+ 184:	00154513          	xor	a0,a0,1                 //if a5 < a0, set a0 = 0, ERROR
+ 188:	e89ff0ef          	jal	10 <check>
+ 18c:	ff2492e3          	bne	s1,s2,170 <main+0x3c>
+ 190:	00c12083          	lw	ra,12(sp)
+ 194:	00812403          	lw	s0,8(sp)
+ 198:	00412483          	lw	s1,4(sp)
+ 19c:	00012903          	lw	s2,0(sp)
+ 1a0:	00000513          	li	a0,0
+ 1a4:	01010113          	add	sp,sp,16
+ 1a8:	00008067          	ret
+
+000001ac <halt>:
+ 1ac:	00050a63          	beqz	a0,1c0 <halt+0x14>
+ 1b0:	eeeef537          	lui	a0,0xeeeef
+ 1b4:	eee50513          	add	a0,a0,-274 # eeeeeeee <_heap_start+0xeeeeceee>
+ 1b8:	00100073          	ebreak
+ 1bc:	0000006f          	j	1bc <halt+0x10>
+ 1c0:	acacb537          	lui	a0,0xacacb
+ 1c4:	cac50513          	add	a0,a0,-852 # acacacac <_heap_start+0xacac8cac>
+ 1c8:	00100073          	ebreak
+ 1cc:	ff1ff06f          	j	1bc <halt+0x10>
+
+000001d0 <_trm_init>:
+ 1d0:	ff010113          	add	sp,sp,-16
+ 1d4:	1e400513          	li	a0,484
+ 1d8:	00112623          	sw	ra,12(sp)
+ 1dc:	f59ff0ef          	jal	134 <main>
+ 1e0:	fcdff0ef          	jal	1ac <halt>

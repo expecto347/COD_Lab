@@ -658,8 +658,8 @@ Check_Data_SEL IF_Check_Data_SEL(
 
     .immediate(32'h0),
 
-    .alu_src1(32'h0),
-    .alu_src2(32'h0),
+    .alu_sr1(32'h0),
+    .alu_sr2(32'h0),
     .alu_func(4'hf),
     .alu_ans(32'h0),
 
@@ -696,8 +696,8 @@ Check_Data_SEL ID_Check_Data_SEL(
 
     .immediate(imm_id),
 
-    .alu_src1(32'h0),
-    .alu_src2(32'h0),
+    .alu_sr1(32'h0),
+    .alu_sr2(32'h0),
     .alu_func(alu_func_id),
     .alu_ans(32'h0),
 
@@ -734,8 +734,8 @@ Check_Data_SEL EX_Check_Data_SEL(
 
     .immediate(imm_ex),
 
-    .alu_src1(alu_src1_ex),
-    .alu_src2(alu_src2_ex),
+    .alu_sr1(alu_src1_ex),
+    .alu_sr2(alu_src2_ex),
     .alu_func(alu_func_ex),
     .alu_ans(alu_ans_ex),
 
@@ -772,8 +772,8 @@ Check_Data_SEL MEM_Check_Data_SEL(
 
     .immediate(imm_mem),
 
-    .alu_src1(alu_src1_mem),
-    .alu_src2(alu_src2_mem),
+    .alu_sr1(alu_src1_mem),
+    .alu_sr2(alu_src2_mem),
     .alu_func(alu_func_mem),
     .alu_ans(alu_ans_mem),
 
@@ -810,8 +810,8 @@ Check_Data_SEL WB_Check_Data_SEL(
 
     .immediate(imm_wb),
 
-    .alu_src1(alu_src1_wb),
-    .alu_src2(alu_src2_wb),
+    .alu_sr1(alu_src1_wb),
+    .alu_sr2(alu_src2_wb),
     .alu_func(alu_func_wb),
     .alu_ans(alu_ans_wb),
 

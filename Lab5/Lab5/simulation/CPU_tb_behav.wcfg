@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPU_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPU_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="149823737fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="593"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject type="logic" fp_name="/CPU_tb/cpu_clk">
+      <obj_property name="ElementShortName">cpu_clk</obj_property>
+      <obj_property name="ObjectShortName">cpu_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/CPU_tb/cpu_rst">
+      <obj_property name="ElementShortName">cpu_rst</obj_property>
+      <obj_property name="ObjectShortName">cpu_rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/mem_addr">
+      <obj_property name="ElementShortName">mem_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/mem_din">
+      <obj_property name="ElementShortName">mem_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/mem_dout">
+      <obj_property name="ElementShortName">mem_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/im_addr">
+      <obj_property name="ElementShortName">im_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">im_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/im_dout">
+      <obj_property name="ElementShortName">im_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">im_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/current_pc">
+      <obj_property name="ElementShortName">current_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/next_pc">
+      <obj_property name="ElementShortName">next_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">next_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/CPU_tb/mem_we">
+      <obj_property name="ElementShortName">mem_we</obj_property>
+      <obj_property name="ObjectShortName">mem_we</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/CPU_tb/cpu/RF/regfile">
+      <obj_property name="ElementShortName">regfile[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regfile[0:31][31:0]</obj_property>
+   </wvobject>
+</wave_config>

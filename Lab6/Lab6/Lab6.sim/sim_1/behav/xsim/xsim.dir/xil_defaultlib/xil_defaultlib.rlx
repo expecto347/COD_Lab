@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/root/COD_Lab/Lab6/Lab6/Lab6.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/root/COD_Lab/Lab6/Lab6/Lab6.srcs/sources_1/ip/main_memory/sim/main_memory.v,1687334691,verilog,,/root/COD_Lab/Lab6/cache/cache/BRAM.v,,main_memory,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/BRAM.v,1686742664,verilog,,/root/COD_Lab/Lab6/cache/cache/BRAM_common.v,,BRAM_bytewrite,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/BRAM_common.v,1686742664,verilog,,/root/COD_Lab/Lab6/cache/cache/axi_arbiter.v,,BRAM_common,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/axi_arbiter.v,1686742664,verilog,,/root/COD_Lab/Lab6/cache/cache/dcache.v,,axi_arbiter,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/cache_tb.sv,1687350088,systemVerilog,,,,cache_tb,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/dcache.v,1687350124,verilog,,/root/COD_Lab/Lab6/cache/cache/icache.v,,dcache,,,,,,,,
+/root/COD_Lab/Lab6/cache/cache/icache.v,1687288096,verilog,,,,icache,,,,,,,,

@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab6.srcs/sources_1/ip/main_memory/sim/main_memory.v" \
+"../../../../../cache/cache/BRAM.v" \
+"../../../../../cache/cache/BRAM_common.v" \
+"../../../../../cache/cache/axi_arbiter.v" \
+"../../../../../cache/cache/dcache.v" \
+"../../../../../cache/cache/icache.v" \
+
+sv xil_defaultlib  \
+"../../../../../cache/cache/cache_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

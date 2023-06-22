@@ -18,17 +18,17 @@ module MEM(
 );
    
 INST_MEM IM(
-.a(im_addr[9:2]),      // input wire [7 : 0] a
-.spo(im_dout)  // output wire [31 : 0] spo
+.a(im_addr[9:2]),
+.spo(im_dout)
 );
 
 DATA_MEM DM(
-  .a(dm_addr[9:2]),        // input wire [7 : 0] a
-  .d(dm_din),        // input wire [31 : 0] d
-  .dpra(mem_check_addr[7:0]),  // input wire [7 : 0] dpra
-  .clk(clk),    // input wire clk
-  .we(dm_we),      // input wire we
-  .spo(dm_dout),    // output wire [31 : 0] spo
-  .dpo(mem_check_data)    // output wire [31 : 0] dpo
+  .a(dm_addr[9:2]),
+  .d(dm_din),
+  .dpra(mem_check_addr[7:0]),
+  .clk(clk),
+  .we(dm_we),
+  .spo(dm_dout),
+  .dpo(mem_check_data)
 );
 endmodule

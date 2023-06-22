@@ -1,0 +1,24 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/root/COD_Lab/Lab5/Lab5/Lab5.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/root/COD_Lab/Lab5/Lab5/Lab5.srcs/sources_1/ip/DATA_MEM/sim/DATA_MEM.v,1685529600,verilog,,/root/COD_Lab/Lab5/Lab5/Lab5.srcs/sources_1/ip/INST_MEM/sim/INST_MEM.v,,DATA_MEM,,,,,,,,
+/root/COD_Lab/Lab5/Lab5/Lab5.srcs/sources_1/ip/INST_MEM/sim/INST_MEM.v,1685536380,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/ALU.v,,INST_MEM,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/仿真/CPU_tb.v,1685498905,verilog,,,,CPU_tb,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEG_SEL.v,1685499330,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL.v,,Check_Data_SEG_SEL,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL.v,1685498905,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL_HZD.v,,Check_Data_SEL,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEL_HZD.v,1685498905,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/Hazard.v,,Check_Data_SEL_HZD,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v,1685531356,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/CTRL.v,,CPU,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/MEM.v,1685531506,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX.v,,MEM,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/ALU.v,1685526011,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/Branch.v,,ALU,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/Branch.v,1685526808,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/CPU.v,,Branch,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/CTRL.v,1685518015,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/模块文件/Check_Data_SEG_SEL.v,,CTRL,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/Hazard.v,1685535720,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/IMM.v,,Hazard,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/IMM.v,1685525927,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/MEM.v,,IMM,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX.v,1685526776,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX_PC.v,,MUX,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX_PC.v,1685526838,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX_RFwrite.v,,MUX_PC,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/MUX_RFwrite.v,1685527143,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/PC.v,,MUX_RFwrite,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/PC.v,1685529173,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/RF.v,,PC,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/RF.v,1685525223,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/SEG_REG.v,,RF,,,,,,,,
+/root/COD_Lab/Lab5/Lab5_files/Lab5_files/TOP/myCPU/SEG_REG.v,1685521971,verilog,,/root/COD_Lab/Lab5/Lab5_files/Lab5_files/CPU_src/仿真/CPU_tb.v,,SEG_REG,,,,,,,,

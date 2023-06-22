@@ -1,0 +1,318 @@
+
+*** Running vivado
+    with args -log Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: link_design -top Top -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint '/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.srcs/sources_1/ip/main_memory/main_memory.dcp' for cell 'memory/main_mem'
+INFO: [Netlist 29-17] Analyzing 360 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_data[3]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[0]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[1]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hexplay_an[2]'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_din'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_dout'. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/root/COD_Lab/Lab6_pipeline/constraints/constrains.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1712.098 ; gain = 0.000 ; free physical = 11379 ; free virtual = 13010
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 21 instances
+
+8 Infos, 26 Warnings, 26 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1712.098 ; gain = 334.262 ; free physical = 11379 ; free virtual = 13010
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1857.441 ; gain = 145.344 ; free physical = 11374 ; free virtual = 13005
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 12dc02218
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2256.441 ; gain = 399.000 ; free physical = 10984 ; free virtual = 12614
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 7 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 12c1c8693
+
+Time (s): cpu = 00:00:00.90 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12501
+INFO: [Opt 31-389] Phase Retarget created 46 cells and removed 54 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: c623bbc9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+INFO: [Opt 31-389] Phase Constant propagation created 89 cells and removed 165 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 725a3e3d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 6509 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 725a3e3d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 725a3e3d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 725a3e3d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              46  |              54  |                                              0  |
+|  Constant propagation         |              89  |             165  |                                              0  |
+|  Sweep                        |               0  |            6509  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+Ending Logic Optimization Task | Checksum: 46c96a68
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10869 ; free virtual = 12500
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 46c96a68
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12501
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 46c96a68
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12500
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12501
+Ending Netlist Obfuscation Task | Checksum: 46c96a68
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12501
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 26 Warnings, 26 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.379 ; gain = 660.281 ; free physical = 10870 ; free virtual = 12501
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.379 ; gain = 0.000 ; free physical = 10870 ; free virtual = 12501
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/root/COD_Lab/Lab6_pipeline/Lab6/Lab6.runs/impl_1/Top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+Command: report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /root/COD_Lab/Lab6_pipeline/Lab6/Lab6.runs/impl_1/Top_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2444.414 ; gain = 0.000 ; free physical = 10868 ; free virtual = 12499
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2444.414 ; gain = 0.000 ; free physical = 10868 ; free virtual = 12499
+Phase 1 Placer Initialization | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2444.414 ; gain = 0.000 ; free physical = 10868 ; free virtual = 12499
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2444.414 ; gain = 0.000 ; free physical = 10868 ; free virtual = 12499
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 26 Warnings, 26 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 14 22:37:50 2023...
+
+*** Running vivado
+    with args -log Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: open_checkpoint Top_opt.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1386.262 ; gain = 0.000 ; free physical = 11716 ; free virtual = 14013
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2010.215 ; gain = 0.000 ; free physical = 10978 ; free virtual = 13246
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+open_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2010.215 ; gain = 623.953 ; free physical = 10977 ; free virtual = 13245
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2091.090 ; gain = 0.000 ; free physical = 10980 ; free virtual = 13247
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2091.090 ; gain = 0.000 ; free physical = 10980 ; free virtual = 13247
+Phase 1 Placer Initialization | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2091.090 ; gain = 0.000 ; free physical = 10979 ; free virtual = 13248
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 00000000
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2091.090 ; gain = 0.000 ; free physical = 10979 ; free virtual = 13248
+INFO: [Common 17-83] Releasing license: Implementation
+18 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 22 12:47:43 2023...

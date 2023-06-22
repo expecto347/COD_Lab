@@ -14,8 +14,8 @@ module Hazard(
     input [31:0] rf_wd_wb,
     input jal_ex, jalr_ex, br_ex,
 
-    output rf_rd0_fe,
-    output rf_rd1_fe,
+    output reg rf_rd0_fe,
+    output reg rf_rd1_fe,
     output reg [31:0] rf_rd0_fd,
     output reg [31:0] rf_rd1_fd,
 
@@ -45,8 +45,8 @@ initial begin
     flush_mem <= 0;
 end
 
-wire data_hzd_mem;
-wire data_hzd_wb;
+reg data_hzd_mem;
+reg data_hzd_wb;
 
 always @(*) begin
     if (rf_we_mem && rf_wa_mem != 0) begin
@@ -103,12 +103,6 @@ always@(*) begin
         if(rf_wa_wb == rf_ra1_ex)
             rf_rd1_fd = rf_wd_wb;
     end
-    else begin
-        stall_if = 0;
-        stall_id = 0;
-        stall_ex = 0;
-        flush_mem = 0;
-    end
 
     if(data_hzd_mem) begin
         if(rf_wa_mem == rf_ra0_ex)
@@ -122,10 +116,7 @@ always@(*) begin
                     stall_ex = 1;
                     flush_mem = 1;
                 end
-                default:    rf_rd0_fd = 0;
             endcase
-        else
-            rf_rd0_fd = 0;
 
         if(rf_wa_mem == rf_ra1_ex)
             case(rf_wd_sel_mem)
@@ -138,10 +129,7 @@ always@(*) begin
                     stall_ex = 1;
                     flush_mem = 1;
                 end
-                default:    rf_rd1_fd = 0;
             endcase
-        else
-            rf_rd1_fd = 0;
     end
     //note that RF has a write first feature
     
@@ -156,7 +144,4 @@ always@(*) begin
     end
 end
 
-// assign data_hzd_mem = rf_we_mem && rf_wa_mem != 0 && ((rf_re0_ex && rf_wa_mem == rf_ra0_ex) || (rf_re1_ex && rf_wa_mem == rf_ra1_ex));
-// assign data_hzd_wb = rf_we_wb && rf_wa_wb != 0 && ((rf_re0_ex && rf_wa_wb == rf_ra0_ex) || (rf_re1_ex && rf_wa_wb == rf_ra1_ex));
-// assign rf_rd0_fe = (rf_wa_mem != 0 || rf_wa_wb != 0) && rf_re0_ex && ((rf_we_mem && rf_wa_mem == rf_ra0_ex) || (rf_we_wb && rf_wa_wb == rf_ra0_ex));
 endmodule
